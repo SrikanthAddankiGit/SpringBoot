@@ -19,13 +19,13 @@ public class TicketController {
 	@Autowired
 	private TicketDao dao;
 	
-	@PostMapping("/bookTickets")
+	@PostMapping
 	public String bookTicket(@RequestBody List<Ticket> tickets) {
 		dao.saveAll(tickets);
 		return "Ticket is booked" + tickets.size();
 	}
 	
-	@GetMapping("/getTickets")
+	@GetMapping
 	public List<Ticket> getTickets(List<Ticket> tickets){
 		return (List<Ticket>) dao.findAll();
 	}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="ISO-8859-1">
+<title>Student Registration Form</title>
+<link rel="icon"
+	href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9pXzOLyOCjK56OG5flzsNZ8plSwnVSNC01g&usqp=CAU">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+	crossorigin="anonymous">
+<script
+	src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+	integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+	integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+	crossorigin="anonymous"></script>
+
+
+
+<style>
+body {
+	background-image:
+		url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAgv6ursR2gUdaZB0Tjz4cKGGSO6cdUG1TfA&usqp=CAU');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+</style>
+</head>
+<body>
+
+
+	<nav class="navbar navbar-expand-lg  bg-primary">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">SMS</a> <img
+				src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjd4v7Hm-xkJAiDgqgftQIUj3paIn2H1rLCw&usqp=CAU"
+				alt="" width="30" height="24">
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="#">Home</a></li>
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="#">Courses</a></li>
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="#">Accounts</a></li>
+
+				</ul>
+				<form class="d-flex" role="search">
+					<input class="form-control me-2" type="search" placeholder="Search"
+						aria-label="Search">
+					<button class="btn btn-outline-success" type="submit">Search</button>
+				</form>
+			</div>
+		</div>
+	</nav>
+
+
+
+
+
+
+
+
+
+	<div class="card">
+		<div class="card-body">
+
+			<div>
+				<h1>Student Registration Form</h1>
+			</div>
+			<form class="row g-3" th:action="@{registration}"
+				th:object="${student}" method="post">
+
+
+				<div class="mb-3">
+					<label for="exampleFormControlInput1" class="form-label">Student
+						Name</label> <input type="text" id="name" class="form-control"
+						placeholder="Username" aria-label="Username"
+						aria-describedby="basic-addon1">
+				</div>
+
+				<div class="mb-3">
+					<label for="exampleFormControlInput1" class="form-label">Course</label>
+					<input type="text" id="course" class="form-control" placeholder="Course"
+						aria-label="course" aria-describedby="basic-addon1">
+				</div>
+
+
+
+				<div class="mb-3">
+					<label for="exampleFormControlInput1" class="form-label">Fee</label>
+					<input type="text" id="fee" class="form-control" placeholder="Fee"
+						aria-label="fee" aria-describedby="basic-addon1">
+				</div>
+
+
+				<div>
+					<button type="submit" value = "submit" class="btn btn-primary">Submit</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
