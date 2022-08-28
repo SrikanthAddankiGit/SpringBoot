@@ -5,11 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages= {"com.app.course"})
-public class CourseApiDataApplication {
+@ComponentScan(basePackages = {"com.app.Student.StudentMarks"})
+public class StudentMarksCardApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CourseApiDataApplication.class, args);
+		SpringApplication.run(StudentMarksCardApplication.class, args);
 	}
 
 }
