@@ -6,8 +6,6 @@ import org.springframework.stereotype.Service;
 import com.app.entity.StudentMarks;
 import com.app.repository.StudentMarksRepository;
 
-
-
 @Service
 public class StudentService implements IStudentService {
 

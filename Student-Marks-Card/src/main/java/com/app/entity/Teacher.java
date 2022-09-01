@@ -1,10 +1,17 @@
 package com.app.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+
+import lombok.AllArgsConstructor;
 
 @Entity
+@AllArgsConstructor
 public class Teacher {
 
 	@Id
@@ -17,26 +24,27 @@ public class Teacher {
 	private float total;
 	public float average;
 	public String grade;
-	
+	@OneToMany(targetEntity=StudentMarks.class,cascade=CascadeType.ALL,fetch=FetchType.LAZY)
+	@JoinColumn(name="T_ID",referencedColumnName="ID")
 	private StudentMarks studentMarks;
 	public Teacher() {
 		super();
 	}
 	
 	
-	public Teacher(int id, String name, float physics, float chemistry, float maths, float total, float average,
-			String grade, int studentId) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.physics = physics;
-		this.chemistry = chemistry;
-		this.maths = maths;
-		this.total = total;
-		this.average = average;
-		this.grade = grade;
-		this.studentMarks = new StudentMarks(studentId,"",physics,chemistry,maths,total,average,"");
-	}
+//	public Teacher(int id, String name, float physics, float chemistry, float maths, float total, float average,
+//			String grade, int studentId) {
+//		super();
+//		this.id = id;
+//		this.name = name;
+//		this.physics = physics;
+//		this.chemistry = chemistry;
+//		this.maths = maths;
+//		this.total = total;
+//		this.average = average;
+//		this.grade = grade;
+//		this.studentMarks = new StudentMarks(studentId,"",physics,chemistry,maths,total,average,"", null);
+//	}
 
 
 	public int getId() {

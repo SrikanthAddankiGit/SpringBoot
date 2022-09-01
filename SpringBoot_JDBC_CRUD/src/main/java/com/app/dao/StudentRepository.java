@@ -15,4 +15,6 @@ public interface StudentRepository {
 	String deleteById(int id);
 
 	List<Student> allStudents();
+	
+	
 }
