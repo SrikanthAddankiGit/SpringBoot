@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/StudentTeacher_Procedure_Project/StudentTeacher_Procedure_Project.iml" filepath="$PROJECT_DIR$/StudentTeacher_Procedure_Project/StudentTeacher_Procedure_Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Student_Teacher/Student_Teacher.iml" filepath="$PROJECT_DIR$/Student_Teacher/Student_Teacher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Student_Teacher-1/Student_Teacher-1.iml" filepath="$PROJECT_DIR$/Student_Teacher-1/Student_Teacher-1.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Techmojo-SpringBoot.iml" filepath="$PROJECT_DIR$/.idea/Techmojo-SpringBoot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/employee/employee.iml" filepath="$PROJECT_DIR$/employee/employee.iml" />
     </modules>
   </component>
 </project>

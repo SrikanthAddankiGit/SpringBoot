@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Springboot-StoredProcedure-Call/Springboot-StoredProcedure-Call/Springboot-StoredProcedure-Call.iml" filepath="$PROJECT_DIR$/Springboot-StoredProcedure-Call/Springboot-StoredProcedure-Call/Springboot-StoredProcedure-Call.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StudentTeacher_Procedure_Project/StudentTeacher_Procedure_Project.iml" filepath="$PROJECT_DIR$/StudentTeacher_Procedure_Project/StudentTeacher_Procedure_Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Student_Teacher/Student_Teacher.iml" filepath="$PROJECT_DIR$/Student_Teacher/Student_Teacher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Student_Teacher-1/Student_Teacher-1.iml" filepath="$PROJECT_DIR$/Student_Teacher-1/Student_Teacher-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Techmojo-SpringBoot.iml" filepath="$PROJECT_DIR$/.idea/Techmojo-SpringBoot.iml" />
+    </modules>
+  </component>
+</project>

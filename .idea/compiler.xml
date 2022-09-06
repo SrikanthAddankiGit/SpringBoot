@@ -7,16 +7,27 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Student_Teacher" />
         <module name="StudentTeacher_Procedure_Project" />
+        <module name="Student_Teacher-1" />
+        <module name="employee" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="employee" target="11" />
+      <module name="Springboot-StoredProcedure-Call" target="11" />
+      <module name="Student_Teacher" target="11" />
+      <module name="Student_Teacher-1" target="11" />
       <module name="StudentTeacher_Procedure_Project" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Springboot-StoredProcedure-Call" options="-parameters" />
       <module name="StudentTeacher_Procedure_Project" options="-parameters" />
+      <module name="Student_Teacher" options="-parameters" />
+      <module name="Student_Teacher-1" options="-parameters" />
+      <module name="employee" options="-parameters" />
     </option>
   </component>
 </project>

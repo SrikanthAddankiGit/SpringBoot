@@ -1,0 +1,29 @@
+----------------------------------------------------------------
+Mon Aug 22 12:48:49 IST 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0182-c46b-17d6-000002d76720 
+on database directory memory:C:\Users\srikanth.addanki.TECHMOJO\Desktop\Techmojo-SpringBoot\Course-api-data\99747bd3-bb0c-429e-a396-b0cf65b1e992 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@1055e4af 
+Loaded from file:/C:/Users/srikanth.addanki.TECHMOJO/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Eclipse Adoptium
+java.runtime.version=18.0.1+10
+user.dir=C:\Users\srikanth.addanki.TECHMOJO\Desktop\Techmojo-SpringBoot\Course-api-data
+os.name=Windows 11
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Mon Aug 22 16:57:06 IST 2022:
+Shutting down instance a816c00e-0182-c46a-362e-000001809af8 on database directory memory:C:\Users\srikanth.addanki.TECHMOJO\Desktop\Techmojo-SpringBoot\Course-api-data\76327ade-2bd4-4f57-8dc9-7cb2c315accf with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2328c243 
+----------------------------------------------------------------
+Mon Aug 22 16:57:06 IST 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance 52da80c5-0182-c46a-362e-000001809af8 
+on database directory memory:C:\Users\srikanth.addanki.TECHMOJO\Desktop\Techmojo-SpringBoot\Course-api-data\79ae4584-1db9-4ef0-aa9e-c7089668a0df with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2328c243 
+Loaded from file:/C:/Users/srikanth.addanki.TECHMOJO/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Eclipse Adoptium
+java.runtime.version=18.0.1+10
+user.dir=C:\Users\srikanth.addanki.TECHMOJO\Desktop\Techmojo-SpringBoot\Course-api-data
+os.name=Windows 11
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
