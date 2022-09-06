@@ -3,6 +3,8 @@ package com.app.service;
 import java.sql.*;
 import java.util.Map;
 
+import com.app.model.Course;
+import com.app.model.Teacher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.simple.SimpleJdbcCall;
@@ -12,70 +14,41 @@ import com.app.dao.IStudentDAO;
 import com.app.model.Student;
 
 @Service
-public class StudentServiceImpl implements IStudentDAO {
-
+public class StudentServiceImpl implements IStudentService {
     @Autowired
-    private JdbcTemplate jdbcTemplate;
-    private static Connection connection;
-    private CallableStatement stmt;
-
-    String jdbcUrl = "jdbc:mysql://localhost:3306/total";
-    String userName = "root";
-    String password = "manager";
-
-    String sql_insert = "";
+    private IStudentDAO studentDAO;
 
     @Override
     public void create(Student student) {
-        String sql = "insert into student (name,phone) values(?,?)";
-        jdbcTemplate.update(sql, student.getName(), student.getPhone());
+        studentDAO.create(student);
     }
 
     @Override
     public Map<String, Object> getMarks() {
-        SimpleJdbcCall simplejdbccall = new SimpleJdbcCall(jdbcTemplate).withProcedureName("GETMARKS");
-        Map<String, Object> out = simplejdbccall.execute(simplejdbccall);
-        System.out.println("Stored procedure called successfully!");
-        return out;
-
+        return studentDAO.getMarks();
     }
 
     @Override
-    public Map<String, Object> MaxMarksInCourse() {
-        SimpleJdbcCall simplejdbccall = new SimpleJdbcCall(jdbcTemplate).withProcedureName("GetMaxMarks");
-        Map<String, Object> out = simplejdbccall.execute(simplejdbccall);
-        System.out.println("Stored procedure called successfully!");
-        return out;
-
+    public Map<String, Object> maxMarksInCourse() {
+        return studentDAO.maxMarksInCourse();
     }
 
     @Override
-    public Map<String, Object> GetHighCredit() {
-        SimpleJdbcCall simplejdbccall = new SimpleJdbcCall(jdbcTemplate).withProcedureName("GetHighCredit");
-        Map<String, Object> out = simplejdbccall.execute(simplejdbccall);
-        System.out.println("Stored procedure called successfully!");
-        return out;
+    public Map<String, Object> getHighCredit() {
+        return studentDAO.getHighCredit();
     }
 
     @Override
     public void insertData(Student student) {
-        try (Connection conn = DriverManager.getConnection(jdbcUrl, userName, password);) {
-            conn.setAutoCommit(false);
+        studentDAO.insertData(student);
+    }
 
-            try (CallableStatement insertStmt = conn.prepareCall("{call insertStudent(?, ?)}");
-                     ) {
-                insertStmt.setString(1, student.getName());
-                insertStmt.setString(2, student.getPhone());
-                insertStmt.executeUpdate();
-                conn.commit();
-                System.out.println("inserted......");
+    public void insertCourse(Course course){
+        studentDAO.insertCourse(course);
+    }
 
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    @Override
+    public void insertTeacher(Teacher teacher) {
+        studentDAO.insertTeacher(teacher);
+    }
 }
-}
-//    PreparedStatement insertStmt = conn.prepareStatement("insertStudent")

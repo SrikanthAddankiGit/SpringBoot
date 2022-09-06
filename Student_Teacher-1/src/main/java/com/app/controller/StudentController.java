@@ -1,28 +1,25 @@
 package com.app.controller;
 
+import com.app.model.Course;
 import com.app.model.Student;
-import com.app.service.StudentServiceImpl;
+import com.app.model.Teacher;
+import com.app.service.IStudentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
 @RestController
 public class StudentController {
-
-
     @Autowired
-    private StudentServiceImpl service;
 
+    private IStudentService service;
 
     @GetMapping("/student")
+    @ResponseBody
     public Map<String, Object> getMarks() {
         System.out.println("Stored procedure called successfully!");
         return service.getMarks();
-
     }
 
     @PostMapping("/saveAll")
@@ -32,22 +29,33 @@ public class StudentController {
     }
 
     @GetMapping("/maxMarks")
-    public Map<String, Object> MaxMarksInCourse() {
-        return service.MaxMarksInCourse();
+    public Map<String, Object> maxMarksInCourse() {
+        return service.maxMarksInCourse();
 
     }
 
     @GetMapping("/high")
-    public Map<String, Object> GetHighCredit() {
+    public Map<String, Object> getHighCredit() {
 
-		return service.GetHighCredit();
+        return service.getHighCredit();
     }
 
-	@PostMapping("/save")
-	public void create(@RequestBody Student student){
+    @PostMapping("/save")
+    public void create(@RequestBody Student student) {
 
         service.create(student);
-	}
+    }
+
+    @PostMapping("/courseInsert")
+    public void insertCourse(@RequestBody Course course){
+        service.insertCourse(course);
+    }
+
+    @PostMapping("/teacherData")
+    public void insertTeacher(@RequestBody Teacher teacher){
+
+        service.insertTeacher(teacher);
+    }
 
 
 }
