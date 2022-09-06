@@ -1,30 +1,29 @@
 package com.app.dao;
 
-import java.sql.Date;
-import java.sql.SQLException;
-import java.util.Map;
 
+import java.util.Map;
 import com.app.model.Course;
 import com.app.model.Student;
-import com.app.model.Teacher;
+import com.app.model.Teacher;  // import statements
 
-import javax.sql.DataSource;
 
-public interface IStudentDAO {
 
-    public void create(Student student);
+public interface IStudentDAO {  //IStudentDAO interface start here
 
-    public Map<String, Object> getMarks();
+    public void create(Student student);  // create method
 
-    public Map<String, Object> maxMarksInCourse();
+    public Map<String, Object> getMarks();  //getMarks method
 
-    public Map<String, Object> getHighCredit();
+    public Map<String, Object> maxMarksInCourse();  // getMaxMarks in course
 
-    public void insertData(Student student);
+    public Map<String, Object> getHighCredit(); // get high credit
 
-    public void insertCourse(Course course);
+    public void insertData(Student student);  // insert data into student table
 
-    public void insertTeacher(Teacher teacher);
+    public void insertCourse(Course course);  // insert data into course table
+
+    public void insertTeacher(Teacher teacher);  // insert teacher data
 
 
 }
+// IStudentDAO interface end here

@@ -1,19 +1,20 @@
 package com.app.model;
 
+// Student Class
+public class Student { // class start here
 
-public class Student {
+    private int StudentId; //studentId field
+    private String studentName;  //studentName field
+    private String studentPhone;
 
-    private int StudentId;
-    private String name;
-    private String phone;
-
-
-    public Student(int studentId, String name, String phone) {
+    // Constructor with parameters
+    public Student(int studentId, String studentName, String studentPhone) {
         StudentId = studentId;
-        this.name = name;
-        this.phone = phone;
+        this.studentName = studentName;
+        this.studentPhone = studentPhone;
     }
 
+    // Getters and setters for fields
     public int getStudentId() {
         return StudentId;
     }
@@ -22,28 +23,30 @@ public class Student {
         StudentId = studentId;
     }
 
-    public String getName() {
-        return name;
+    public String getStudentName() {
+        return studentName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getStudentPhone() {
+        return studentPhone;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setStudentPhone(String studentPhone) {
+        this.studentPhone = studentPhone;
     }
 
+    //toStrings for fields
     @Override
     public String toString() {
         return "Student{" +
                 "StudentId=" + StudentId +
-                ", name='" + name + '\'' +
-                ", phone='" + phone + '\'' +
+                ", studentName='" + studentName + '\'' +
+                ", studentPhone='" + studentPhone + '\'' +
                 '}';
     }
 }
+// class end here
